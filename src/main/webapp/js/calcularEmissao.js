@@ -2,18 +2,24 @@ $(document).ready(function() {
 	
 	$("#btnCalcular").click(function(){
     	calcularEmissao();
+    	esconderLoading();
 	});
 	
 	$("#frmCalcular").submit(function() {
 		calcularEmissao();
+		esconderLoading();
 	});
 	
 	calcularEmissao = function() {
+	
 		var cep = $("#inputCep").val();
 	    if(naoInformouCep(cep)) {
 	    	alert("Informe o seu CEP");
 	    }
 	    else {
+			
+			mostrarLoading();
+
 	    	cep = String(cep).replace("-", "");
 			var uri = "services/emissao/" + cep;
 
@@ -41,5 +47,14 @@ $(document).ready(function() {
 	naoInformouCep = function(cep) {
     	return cep == undefined || cep == "";
     };
+    
+    mostrarLoading = function() {
+    	var imgLoading = "<img src=\"img/loading.gif\"/><br><br>"
+    	$("#calcular").html(imgLoading);
+    }
+    
+    esconderLoading = function() {
+    	$("#calcular").html("");
+    }
     
 });
