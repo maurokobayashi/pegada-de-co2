@@ -25,16 +25,16 @@ $(document).ready(function() {
 	        	$("#resultadoTransporte").html(transporte);
 	        	$("#resultadoDistancia").html(distancia);
 	        	$("#resultadoEmissao").html(emissao);
+				
+				var mensagemErro = data.mensagem;
+	
+				if(mensagemErro == undefined || mensagemErro == "") {
+				    $("#resultado").modal('toggle');
+				}
+				else {
+					alert(data.mensagem);
+				}
 	       	});
-			
-			var mensagemErro = data.mensagem;
-
-			if(mensagemErro == undefined || mensagemErro == "") {
-			    $("#resultado").modal('toggle');
-			}
-			else {
-				alert(data.mensagem);
-			}
 	    }
 	}
 	
