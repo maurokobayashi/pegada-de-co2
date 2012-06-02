@@ -2,12 +2,10 @@ $(document).ready(function() {
 	
 	$("#btnCalcular").click(function(){
     	calcularEmissao();
-    	esconderLoading();
 	});
 	
 	$("#frmCalcular").submit(function() {
 		calcularEmissao();
-		esconderLoading();
 	});
 	
 	calcularEmissao = function() {
@@ -40,6 +38,8 @@ $(document).ready(function() {
 				else {
 					alert(data.mensagem);
 				}
+				
+    			esconderLoading();
 	       	});
 	    }
 	}
