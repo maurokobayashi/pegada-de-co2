@@ -17,7 +17,7 @@ $(document).ready(function(){
     };
     
     calcularEmissao = function(cep) {
-    	var uri = "services/emisao/" + cep;
+    	var uri = "services/emissao/" + cep;
 
         $.getJSON(uri, function(data) {
         	alert(JSON.stringify(data));
