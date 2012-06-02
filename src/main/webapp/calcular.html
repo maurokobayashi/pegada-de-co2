@@ -4,7 +4,6 @@
         <title>Pegada de Carbono | Gestão Ambiental EACH USP</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="css/prettify.css" type="text/css" rel="stylesheet" />
         <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
     </header>
 
@@ -18,8 +17,8 @@
                     <h1>Pegada de Carbono</h1>
                     <br>
                     <form class="well form-search">
-                        <input type="text" class="input-high search-query" placeholder="digite seu e-mail">
-                        <a class="btn btn-success" data-toggle="modal" href="#resultado">
+                        <input id="inputCep" type="text" class="input-high search-query" placeholder="digite seu cep">
+                        <a id="btnCalcular" class="btn btn-success">
                             <i class="icon-leaf icon-white"></i> Calcular emiss&atilde;o de CO2
                         </a>
                     </form>
@@ -77,12 +76,10 @@
                 </div>
             </div>
 
-            
-                
-
         </div>
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/calcularEmissao.js"></script>
   </body>
 </html>
