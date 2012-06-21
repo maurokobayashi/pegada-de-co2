@@ -14,7 +14,7 @@ public class POC {
     @Path("/{atividade}")
     public String obterAtividade(@PathParam("atividade") String atividade) {
     	
-        return "Parab&eacute;ns por clicar no link. Se eu fosse legal, te daria um cupom para um '" + atividade + "'";
+        return "Obrigado por clicar no link. Se eu fosse legal, te daria um cupom para um '" + atividade + "'";
     }
 
 }
