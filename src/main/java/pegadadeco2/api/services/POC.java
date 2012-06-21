@@ -11,8 +11,8 @@ import javax.ws.rs.core.MediaType;
 public class POC {
 
     @GET
-    @Path("/{id}/{atividade}")
-    public String obterAtividade(@PathParam("id") String id, @PathParam("atividade") String atividade) {
+    @Path("/{atividade}/{id}")
+    public String obterAtividade(@PathParam("atividade") String atividade, @PathParam("id") String id) {
     	
         return "Obrigado por clicar no link. Se eu fosse legal, te daria um cupom para um '" + atividade + "'";
     }
