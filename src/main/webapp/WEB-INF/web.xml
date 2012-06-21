@@ -29,7 +29,7 @@
   
   <servlet-mapping>
     <servlet-name>jersey-services</servlet-name>
-    <url-pattern>/10284/*</url-pattern>
+    <url-pattern>/atividades/*</url-pattern>
   </servlet-mapping>
 
 </web-app>
